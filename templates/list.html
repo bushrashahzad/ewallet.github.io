@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Summary
+{% endblock %}
+
+{% block main %}
+<body class="summary2">
+    <form action="/summary" method="post">
+        <table>
+            <thead>
+                <thead>
+                    <div class="mb-4">
+                  <h1 style="color:white;font-size:40px;text-align:center;">SUMMARY</h1>
+                    </div>
+                </thead>
+                <tr>
+                    <th style="color:white;" class="text-startr">Date</th>
+                    <th style="color:white;" class="text-start">Home Rent</th>
+                    <th style="color:white;" class="text-start">Groceries</th>
+                    <th style="color:white;" class="text-start">Utilities:(Electricity Bill+Gas Bill)</th>
+                    <th style="color:white;" class="text-start">Shopping</th>
+                    <th style="color:white;" class="text-start">Travel</th>
+                    <th style="color:white;" class="text-start">Petrol/Diesel</th>
+                    <th style="color:white;" class="text-start">Loan payment</th>
+                    <th style="color:white;" class="text-start">Education</th>
+                    <th style="color:white;" class="text-start">Weekly Outing</th>
+                    <th style="color:white;" class="text-start">Other</th>
+                    <div class="vertical"></div>
+                    <th style="color:white;" class="text-start">Total Spend</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in monthly1 %}
+                <tr>
+                    <td style='font-weight:bold;color:white;' class="text-center">{{ i.datetime }}</td>
+                    <td style='font-weight:bold;color:white;' class="text-start">{{ i.homerent | usd }}</td>
+                    <td style='font-weight:bold;color:white;' class="text-start">{{ i.groceries | usd }}</td>
+                    <td style='font-weight:bold;color:white;' class="text-start">{{ i.eb | usd }}</td>
+                    <td style='font-weight:bold;color:white;' class="text-start">{{ i.shopping | usd }}</td>
+                    <td style='font-weight:bold;color:white;' class="text-start">{{ i.travel | usd }}</td>
+                    <td style='font-weight:bold;color:white;' class="text-start">{{ i.petrol | usd }}</td>
+                    <td style='font-weight:bold;color:white;' class="text-start">{{ i.loan | usd }}</td>
+                    <td style='font-weight:bold;color:white;' class="text-start">{{ i.education | usd }}</td>
+                    <td style='font-weight:bold;color:white;' class="text-start">{{ i.weekly | usd }}</td>
+                    <td style='font-weight:bold;color:white;' class="text-start">{{ i.other | usd }}</td>
+                    <td style='font-weight:bold;color:white;' class="text-start">{{ i.spend2 | usd }}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                    <td style="color:white;" class="border-0 fw-bold text-end" colspan="11">Expenses</td>
+                    <td style='font-weight:bold;color:white;' class="text-end">{{ total_s1[0]["spend1"] | usd }}</td>
+                  </tr>
+                <tr>
+                  <!-- TODO: Loop through the database entries to display them in this table -->
+                  <td style="color:white;" class="border-0 fw-bold text-end" colspan="11">Cash</td>
+                  <td style='font-weight:bold;color:white;' class="text-end">{{ cash10[0]['cash'] | usd }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+{% endblock %}

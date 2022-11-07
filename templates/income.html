@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Income
+{% endblock %}
+
+{% block main %}
+<body class="income4">
+    <form action="/income" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus id="income" name="income" placeholder="Income" type="number" required>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-danger" type="submit">Income</button>
+            </div>
+                <table>
+            <thead>
+                <tr>
+                    <th style="color:#ffffff;font-weight:bold;" class="text-center">Date</th>
+                    <th style="color:#ffffff;font-weight:bold;" class="text-start">Income</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                {% for i in income3 %}
+                <tr>
+                    <td style="color:#ffffff;font-weight:bold;" class="text-center">{{ i.datetime5 }}</td>
+                    <td style="color:#ffffff;font-weight:bold" class="text-start">{{ i.income1 | usd }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+    </form>
+</body>
+{% endblock %}

@@ -1,0 +1,203 @@
+/* Size for brand */
+.summary2 {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+#navbar .active {
+    color: #ffffff;
+}
+.income4 {
+    background-image: url("income.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.expenses {
+    background-image: url("expenses.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+}
+.login1 {
+    background-image: url("star.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+
+.home {
+    background-image: url("wallet.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+}
+
+h1.home1 {
+    font-size: 200px;
+    color: white;
+    padding: 80px;
+}
+label.home2{
+    font-size: 20px;
+    color: white;
+    border-top: 500px;
+}
+span.home2{
+    font-size: 20px;
+    color: white;
+    border-top: 500px;
+}
+p.home2{
+    font-size: 20px;
+    color: white;
+    border-top: 500px;
+}
+
+.login, .register{
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+
+.login form, .register form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.login form label, .register form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #ffffff;
+}
+
+.login form input[type="password"], .login form input[type="text"], .login form input[type="email"], .register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.login form input[type="submit"], .register form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover, .register form input[type="submit"]:hover {
+    background-color: #2868c7;
+    transition: background-color 0.2s;
+}
+
+.login form p.msg, .register form p.msg {
+    color: #ff0000;
+}
+.login form p.login3, .register form p.register3 {
+    font-size: 15px;
+    color: black;
+    border-top: 100px;
+}
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+body {
+    background-color: #fff;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    width: 90%;
+}
+
+.section {
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 0.5rem;
+}
+
+.section:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+
+table {
+    background-color: transparent;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,
+table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    vertical-align: middle;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: rgb(255, 208, 208, 0.3)
+}
+
+
+.monthly table {
+    background-color: transparent;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.monthly table th,
+table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: rgb(255, 208, 150, 0.3)
+}
+

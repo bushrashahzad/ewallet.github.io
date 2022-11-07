@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <div class="register">
+        <body class="login1">
+    <form action="/register" method="post">
+
+        <label class="bg-danger" for="username">
+            <i class="fas fa-user-alt"></i>
+        </label>
+            <input autocomplete="off" autofocus id="username" name="username" placeholder="Username" type="text" required>
+
+            <label class="bg-danger" for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input id="password" name="password" placeholder="Password" type="password" required>
+            <label class="bg-danger" for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input id="confirmation" name="confirmation" placeholder="Password(again)" type="password" required>
+            <p class="msg">{{ msg }}</p>
+            <pre> </pre>
+            <tr>
+                <p class="register3">Already have an account? </p>
+                <pre> </pre>
+                <a href="\login">Login</a>
+            </tr>
+            <input class="bg-danger" type="submit" value="Register">
+    </form>
+</body>
+      </div>
+{% endblock %}

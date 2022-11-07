@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Monthly Budget
+{% endblock %}
+
+{% block main %}
+     <body class="expenses">
+     <form action="/monthly" method="post">
+                <thead>
+                    <div class="mb-4">
+                  <h1 style="color:black;font-size:40px;text-align:center;">Monthly Expenses</h1>
+                    </div>
+                </thead>
+                <div class="monthly">
+                <table>
+                    <tr><td style='font-weight:bold;font-size:20px' id='home' name='home'>Home Rent:</td>
+                    <td><input type="number" step='0.01' min="0" name="homerent" id="homerent" size="10" autofocus="autofocus" required></td></tr>
+                    <tr><td style='font-weight:bold;font-size:20px' >Groceries:</td>
+                    <td><input type="number" step='0.01' min="0" name="groceries" id="groceries" size="20" required></td></tr>
+                    <tr><td style='font-weight:bold;font-size:20px'>Utilities:(Electricity Bill+Gas Bill):</td>
+                    <td><input type="number" step='0.01' min="0" name="eb" id="eb" size="20" required></td></tr>
+                    <tr><td style='font-weight:bold;font-size:20px'>Shopping:</td>
+                    <td style='font-weight:bold'><input type="number" step='0.01' min="0" name="shopping" id="shopping" size="20" required></td></tr>
+                    <tr><td style='font-weight:bold;font-size:20px'>Travel:</td>
+                    <td><input type="number" step='0.01' min="0" name="travel" id="travel" size="20" required></td></tr>
+                    <tr><td style='font-weight:bold;font-size:20px'>Petrol/Diesel:</td>
+                    <td><input type="number" step='0.01' min="0" name="petrol" id="petrol" size="20" required></td></tr>
+                    <tr><td style='font-weight:bold;font-size:20px'>Loan payment:</td>
+                    <td><input type="number" step='0.01' min="0" name="loan" id="loan" size="20" required></td></tr>
+                    <tr><td style='font-weight:bold;font-size:20px'>Education:</td>
+                    <td><input type="number" step='0.01' min="0" name="education" id="education" size="20" required></td></tr>
+                    <tr><td style='font-weight:bold;font-size:20px'>Weekly Outing:</td>
+                    <td><input type="number" step='0.01' min="0" name="weekly" id="weekly" size="20" required></td></tr>
+                    <tr><td style='font-weight:bold;font-size:20px'>Other:</td>
+                    <td><input type="number" step='0.01' min="0" name="other" id="other" size="20" required></td></tr>
+
+                  </table>
+                </div>
+                  <button class="btn btn-danger" type="submit">Submit</button>
+                </tbody>
+     </form>
+    </body>
+{% endblock %}

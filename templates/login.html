@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+    <div class="login">
+        <body class="login1">
+    <form action="/login" method="post">
+
+            <label class="bg-danger" for="username">
+                <i class="fas fa-user-alt"></i>
+            </label>
+            <input autocomplete="off" autofocus id="username" name="username" placeholder="Username" type="text" required>
+            <label class="bg-danger" for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input id="password" name="password" placeholder="Password" type="password" required>
+            <p class="msg">{{ msg }}</p>
+            <pre> </pre>
+            <tr>
+            <p class="login3">Don't have an account? </p>
+            <pre> </pre>
+            <a href="\register"> Sign Up</a>
+        </tr>
+        <input class="bg-danger" type="submit" value="Login">
+
+    </form>
+</body>
+</div>
+
+{% endblock %}
