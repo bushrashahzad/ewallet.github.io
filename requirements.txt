@@ -1,2 +1,5 @@
 Flask
 gunicorn
+Flask-Session
+cs50
+Werkzeug
