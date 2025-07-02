@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>My E-Wallet</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f0f0f0;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #4CAF50;
-    }
-  </style>
-</head>
-<body>
-  <h1>Welcome to My E-Wallet</h1>
-  <p>This is the home page of your site hosted with GitHub Pages.</p>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+       <form action="/" method="post">
+                <body class="home">
+                <h1 class="home1">E-Wallet</h1>
+                <p class="home2">You can manage your Budget and Expences by using E-Wallet</p>
+                
+            </body>
+       </form>
+{% endblock %}
