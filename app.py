@@ -35,7 +35,7 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/home", methods=["GET", "POST"])
 def index():
     return render_template("home.html")
 
@@ -117,7 +117,7 @@ def income():
     return render_template("income.html", income3=income3)
 
 
-@app.route("/login", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def login():
     """Log user in"""
 
@@ -138,7 +138,7 @@ def login():
         session["user_id"] = rows[0]["id"]
 
         # Redirect user to home page
-        return redirect("/")
+        return redirect("/home")
 
     # User reached route via GET (as by clicking a link or via redirect)
 
